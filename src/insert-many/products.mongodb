@@ -1,0 +1,28 @@
+// products.mongodb
+
+use("pet_store")
+
+db.products.drop() // elimina los documentos creados en la colleccion anteriormente
+
+db.products.insertMany([
+  {
+    _id: 1,
+    name: "Prodcut 1",
+    price: 100
+  },
+  {
+    _id: 2,
+    name: "Prodcut 2",
+    price: 20
+  },
+  {
+    _id: 3,
+    name: "Prodcut 3",
+    price: 120
+  },
+  {
+    _id: 4,
+    name: "Prodcut 4",
+    price: 120
+  }
+])
