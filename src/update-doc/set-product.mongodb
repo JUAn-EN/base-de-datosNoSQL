@@ -1,0 +1,82 @@
+use("pet_store")
+
+db.products.updateOne(
+  // query
+  {_id: 1},
+  // change => operators
+  {
+    $set: {
+      name: 'Change name',
+      price: 3000,
+    }
+  }
+);
+
+//update many 
+db.products.updateMany(
+    {},
+    {
+      $set: {
+        price: {
+          1: 10,
+        },
+        filter: { _id:1 } 
+      },
+      $set: {
+        price: {
+          2: 210,
+        },
+        filter: { _id:2 } 
+      },
+      $set: {
+        price: {
+          3: 330,
+        },
+        filter: { _id:3 } 
+      },
+      $set: {
+        price: {
+          4: 420,
+        },
+        filter: { _id:4 } 
+      },
+      $set: {
+        price: {
+          5: 30,
+        },
+        filter: { _id:5 } 
+      },
+      $set: {
+        price: {
+             6: 210,
+        },
+        filter: { _id:6 }
+      },
+      $set: {
+        price: {
+          7: 14410,
+        },
+        filter: { _id:7 } 
+      },
+      $set: {
+        price: {
+          8: 1155,
+        },
+        filter: { _id:8 } 
+      },
+      $set: {
+        price: {
+          9: 1106,
+        },
+        filter: { _id:9 } 
+      },
+      $set: {
+        price: {
+          10: 1103,
+        },
+        filter: { _id:10 } 
+      },
+    }
+  )
+  
+
